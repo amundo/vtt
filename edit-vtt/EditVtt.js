@@ -1,3 +1,5 @@
+import {EditVttCue} from '../edit-vtt-cue/EditVttCue.js'
+
 class EditVTT extends HTMLElement {
     constructor() {
         super();
