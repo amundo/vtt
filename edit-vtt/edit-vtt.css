@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, edit-vtt {
+  height: 100%;
+  overflow-y:scroll;
+}
+
+edit-vtt {
+  
+  font-family: system-ui, -apple-system, sans-serif;
+
+  display: grid;
+  grid-template: 
+    "header header" auto
+    "media  cues" 1fr
+    / 1fr 1fr;
+  gap: 20px;
+
+  .media-container {
+    grid-area: media;
+    width: 100%;
+  }
+
+  .media-container video {
+    width: 100%;
+  }
+
+  .controls {
+    grid-area: header;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .cue-list {
+    grid-area: cues;
+    height: 100%;
+    overflow-y:scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cue-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+
+  .cue-time {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cue-text {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .cue-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button.secondary {
+    background-color: #6c757d;
+  }
+
+  button.danger {
+    background-color: #dc3545;
+  }
+
+  input[type="file"],
+  input[type="time"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .time-input {
+    width: 100px;
+  }
+
+  .storage-info {
+    font-size: 0.8em;
+    color: #6c757d;
+    margin-top: 5px;
+  }
+}
