@@ -425,9 +425,13 @@ class EditVTT extends HTMLElement {
             cueElement.querySelector('.delete-cue').addEventListener('click', () => {
                 this.deleteCue(index);
             });
+
+
+            let editVttCue = document.createElement('edit-vtt-cue')
+            editVttCue.appendChild(cueElement)
             
-            this.cueListElement.appendChild(cueElement);
-        });
+            this.cueListElement.appendChild(editVttCue)
+          });
     }
     
     // Play a specific cue
