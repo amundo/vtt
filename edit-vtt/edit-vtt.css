@@ -4,15 +4,25 @@
 
 html, body, edit-vtt {
   height: 100%;
-  overflow-y:scroll;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-family: system-ui, -apple-system, sans-serif;
+  h1 {
+    padding: 0 1rem;
+  }
 }
 
 edit-vtt {
-  
   font-family: system-ui, -apple-system, sans-serif;
-
+  padding:1rem;
   display: grid;
-  grid-template: 
+  grid-template:
     "header header" auto
     "media  cues" 1fr
     / 1fr 1fr;
@@ -38,7 +48,7 @@ edit-vtt {
   .cue-list {
     grid-area: cues;
     height: 100%;
-    overflow-y:scroll;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     gap: 10px;
