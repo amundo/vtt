@@ -1,5 +1,0 @@
-{
-  "tasks": {
-    "build": "pandoc -f markdown -t html --section-divs --css edit-vtt-cue-docs.css --template=template.html -o edit-vtt-cue-docs.html edit-vtt-cue-docs.md"
-  }
-}
