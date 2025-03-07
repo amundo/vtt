@@ -1,5 +1,7 @@
 {
   "tasks": {
-    "build": "pandoc -f markdown -t html --section-divs --css edit-vtt-docs.css --template=template.html -o edit-vtt-docs.html edit-vtt-docs.md"
+  },
+  "fmt": {
+    "semiColons": false
   }
 }
